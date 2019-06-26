@@ -21,7 +21,7 @@ Route::get('/produto', function(){
 });
 
 
-Route::get('/login', function(){
+Route::get('/conta', function(){
     return view('login');
 });
 
@@ -42,6 +42,17 @@ Route::get('/painel', function(){
     return view('painel.produto');
 });
 
+Route::get('/painelCategoria', function(){
+    return view('painel.categoria');
+});
+
+
+
+
 Route::get('/carrinho', function(){
     return view('carrinho');
+});
+
+Route::get('/corpo', function(){
+    return view('corpo');
 });

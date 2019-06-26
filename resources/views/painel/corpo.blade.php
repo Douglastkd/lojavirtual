@@ -101,7 +101,7 @@
             </div>
             <ul class="nav">
                 <li @yield('menu1')>
-                    <a href="">
+                    <a href="/painel">
                         <i class="material-icons">dashboard</i>
                         <p>Produtos</p>
                     </a>
@@ -110,7 +110,7 @@
 
 
                 <li  @yield('menu2')>
-                    <a  href="">
+                    <a  href="/painelCategoria">
                         <i class="material-icons">assessment</i>
                         <p>Categorias
                         </p>
@@ -234,6 +234,9 @@
             </div>
         </nav>
         <div class="content">
+                @if (Session::has('mensagem'))
+                <div class="alert alert-success">{{ Session::get('mensagem') }}</div>
+            @endif
             <div class="container-fluid">
 
 

@@ -15,7 +15,7 @@
     <div class="cadastro-logar row-fluid">
     <div class="span6">
         <div class="caixa-sombreada borda-principal">
-        <form action="" method="post" class="form-horizontal">
+        <form action="/painel" method="get" class="form-horizontal">
             
             <input type="hidden" name="next" id="next" value="conta_index">
             
@@ -31,7 +31,7 @@
             <div class="control-group ">
                 <label for="id_senha" class="control-label">Senha:</label>
                 <div class="controls">
-                <input id="id_senha" maxlength="32" name="senha" type="password">
+                <input id="id_senha" maxlength="32" name="password" type="password">
                 <button type="submit" class="botao principal">Prosseguir</button>
                 
                 </div>
@@ -47,7 +47,7 @@
     <div class="span6">
         <div class="caixa-sombreada borda-principal">
         
-        <form action="" method="get">
+        <form action="/criarconta" method="get">
             
             <input type="hidden" name="next" value="conta_index">
             

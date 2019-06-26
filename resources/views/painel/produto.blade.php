@@ -23,7 +23,7 @@ class="active"
                       <form method="post" action="" class="form-horizontal">
                        @csrf
                         <div class="card-header card-header-text" data-background-color="rose">
-                              <h4 class="card-title">Dados Produto</h4>
+                              <h4 class="card-title">Cadastro de Produtos</h4>
                           </div>
                           <div class="card-content">
                               <div class="row">
@@ -42,25 +42,11 @@ class="active"
                                   <div class="col-sm-10">
                                       <div class="form-group label-floating is-empty">
                                           <label class="control-label"></label>
-                                          <select class="form-control" name="select">
-                                                <option value="" selected>  Selecione</option> 
+                                          <select class="form-control" name="categoria">
+                                        <option value="" selected>  Selecione</option> 
                                              
                                             <option value="descartaveis" >Descartaveis</option> 
-                                            <option value="respiratoria">Proteção Respiratória</option> 
-                                            <option value="pesperna" >Proteção dos Pés e Pernas</option>
-                                            <option value="cabeca">Proteção da Cabeça</option>
-                                            <option value="olhosface">Proteção dos Olhos e Face</option>
-                                            <option value="quedas">Proteção Contra Quedas</option>
-                                            <option value="corpo">Proteção do Corpo</option>
-                                                  <option value="mao">Proteção das mão</option>
-                                            <option value="auditiva">Proteção Auditiva</option>
-                                                        <option value="sinalizacao">Sinalização</option>
-                       <option value="placas">Placas</option>
-                       <option value="extintores">Extintores</option>
-                      
-                                           <option value="outros">Outros</option>
-                         <option value="cursos">Cursos</option>
-                                          
+    
                                           </select>
                     
                                       <span class="material-input"></span></div>
@@ -78,6 +64,17 @@ class="active"
                                 </div>
                             </div>
 
+
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Imagem</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="file" class="form-control" name="imagem"  value="">
+                                     
+                                    <span class="material-input"></span></div>
+                                </div>
+                            </div>
 
 
 
@@ -117,7 +114,7 @@ class="active"
                                 <i class="material-icons">assignment</i>
                             </div>
                             <div class="card-content">
-                                <h4 class="card-title">Vendas Realizadas</h4>
+                                <h4 class="card-title">Produtos Cadastrados</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">

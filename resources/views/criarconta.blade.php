@@ -24,71 +24,7 @@
        
    
    
-   <script>
-     $(document).ready(function() {
-       esconder_pais = function(lista) {
-         $(lista).each(function(i, e) {
-           $(e).parent().parent().slideUp();
-         });
-       };
-   
-       mostrar_pais = function(lista) {
-         $(lista).each(function(i, e) {
-           $(e).parent().parent().slideDown();
-         });
-       };
-   
-       $('#formCadastroCompleto input[name=tipo]').change(function() {
-         var self = $(this);
-         var tipo = $('#formCadastroCompleto input[name=tipo]:checked').val();
-         if (tipo == 'PF') {
-           lista_esconder = ['#id_cnpj', '#id_ie', '#id_ie_isento', '#id_razao_social', '#id_telefone_comercial'];
-           lista_mostrar = ['#id_cpf', '#id_nome', '#id_data_nascimento', '#id_sexo'];
-         } else if (tipo == 'PJ') {
-           lista_esconder = ['#id_cpf', '#id_data_nascimento', '#id_sexo', '#id_telefone_comercial'];
-           lista_mostrar = ['#id_cnpj', '#id_ie', '#id_ie_isento', '#id_razao_social', '#id_nome'];
-         } else {
-           lista_esconder = ['#id_cpf', '#id_cnpj', '#id_ie', '#id_ie_isento', '#id_razao_social'];
-           lista_mostrar = ['#id_nome'];
-         }
-         esconder_pais(lista_esconder);
-         mostrar_pais(lista_mostrar);
-       }).change();
-   
-       if ($('#id_email').val() && !$('#id_confirmacao_email').val()) {
-         $('#id_confirmacao_email').focus();
-       };
-   
-       $('.formulario-cadastro-cliente').submit(function() {
-         var campoVazio = true;
-         $('.formulario-cadastro-cliente .control-group.required .controls input').each(function() {
-           if ($('#formCadastroCompleto input[name=tipo]:checked').val() == 'PJ') {
-             if ($(this).attr('name') == 'cpf' || $(this).attr('name') == 'data_nascimento') {
-               return;
-             }
-           } else {
-             if ($(this).attr('name') == 'cnpj' || $(this).attr('name') == 'razao_social') {
-               return;
-             }
-           }
-           if (this.value === "") {
-             campoVazio = false;
-             $(this).focus();
-             $(this).parent().parent().addClass('erro error');
-           } else {
-             $(this).parent().parent().removeClass('erro error');
-           }
-         });
-         if ($(".formulario-cadastro-cliente .control-group.required #id_sexo").val() === "" && $('#formCadastroCompleto input[name=tipo]:checked').val() !== 'PJ') {
-           campoVazio = false;
-           $(".formulario-cadastro-cliente .control-group.required #id_sexo").parent().parent().addClass('erro error');
-         } else {
-           $(".formulario-cadastro-cliente .control-group.required #id_sexo").parent().parent().removeClass('erro error');
-         }
-         return campoVazio
-       });
-     });
-   </script>
+  
    
    <form action="" method="post" class="formulario-cadastro-cliente">
      
@@ -103,7 +39,7 @@
                <div class="control-group span12 ">
                  <label for="id_email" class="control-label"><i class="icon-group"></i>Nome Completo</label>
                  <div class="controls">
-                   <input id="id_email" maxlength="128" name="email" placeholder="Digite o seu email" type="text" value="tkd.dodo@gmail.com" class="input-block-level">
+                   <input id="id_email" maxlength="128" name="name" placeholder="Digite o seu nome" type="text" class="input-block-level">
                    
                  </div>
                </div>
@@ -130,12 +66,12 @@
              <div class="row-fluid cor-principal">
                <div class="control-group span6 ">
                  <label for="id_senha" class="control-label"><i class="icon-lock" style="margin: 0 1px 0 2px;"></i> Crie uma senha</label>
-                 <input class="input-block-level" id="id_senha" maxlength="32" name="senha" type="password">
+                 <input class="input-block-level" id="id_senha" maxlength="32" name="password" type="password">
                  
                </div>
                <div class="control-group span6 ">
                  <label for="id_confirmacao_senha" class="control-label">Confirmar senha</label>
-                 <input class="input-block-level" id="id_confirmacao_senha" maxlength="32" name="confirmacao_senha" type="password">
+                 <input class="input-block-level" id="id_confirmacao_senha" maxlength="32" name="password_confirmation" type="password">
                  
                </div>
              </div>

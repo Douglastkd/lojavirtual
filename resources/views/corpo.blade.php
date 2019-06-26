@@ -88,7 +88,7 @@
 			<div class="minha-conta-box">
 				<div class="icon">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 196.469 182.877" style="enable-background:new 0 0 196.469 182.877;" xml:space="preserve"><ellipse id="XMLID_2_" style="fill:none;stroke:#000000;stroke-width:12;stroke-miterlimit:10;" cx="95.875" cy="64.497" rx="52.25" ry="58.497"></ellipse><path id="XMLID_3_" style="fill:none;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-miterlimit:10;" d="   M137.75,131.375c0,0,52.625,10.001,52.625,31.501c0,7.5-5.375,14.001-15.375,14.001c-8.75,0-74,0-74,0"></path><path id="XMLID_4_" style="fill:none;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-miterlimit:10;" d="   M58.438,131.375c0,0-52.531,10.001-52.531,31.501c0,7.5,5.469,14.001,15.469,14.001c8.75,0,73.625,0,73.625,0"></path><rect id="XMLID_5_" x="95.375" y="170.874" width="10.191" height="12.003"></rect></svg></div>
-				<div class="text"><a href="/painel">Criar Conta <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+				<div class="text"><a href="/conta">Criar Conta <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
 			</div>
 
 				
